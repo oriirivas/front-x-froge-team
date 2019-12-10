@@ -5,15 +5,18 @@ import { AppComponent } from './app.component';
 import { LoginComponent } from './componets/login/login.component';
 
 import { RouterModule, Routes } from '@angular/router';
+import { NotasComponent } from './componets/notas/notas.component';
 
 const appRoutes: Routes = [
-  { path: 'login', component: LoginComponent }
+  { path: 'login', component: LoginComponent },
+  { path: 'notas', component: NotasComponent }
 ];
 
 @NgModule({
   declarations: [
     AppComponent,
-    LoginComponent
+    LoginComponent,
+    NotasComponent
   ],
   imports: [
     RouterModule.forRoot(
