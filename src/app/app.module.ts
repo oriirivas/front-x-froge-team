@@ -4,19 +4,16 @@ import { AppComponent } from './app.component';
 import { LoginComponent } from './componets/login/login.component';
 import { CursoComponent } from './componets/curso/curso.component';
 import { RouterModule, Routes } from '@angular/router';
-import { NotasComponent } from './componets/notas/notas.component';
 import { RegisterComponent } from './componets/register/register.component';
 import { TableComponent } from './componets/table/table.component';
 import { AsignaturasComponent } from './componets/asignaturas/asignaturas.component';
 import { HomeComponent } from './componets/home/home.component';
+import { BarraComponent } from './componets/barra/barra.component';
+import { NotasComponent } from './componets/notas/notas.component';
 
 //y todo esto tambien para la ruta
 const appRoutes: Routes = [
   { path: 'login', component: LoginComponent },
-  { path: 'curso', component: CursoComponent },
-  { path: 'notas', component: NotasComponent },
-  { path: 'asignaturas', component: AsignaturasComponent },
-  { path: 'home', component: HomeComponent },
   {path: 'home', component: HomeComponent },
   { path: 'asignaturas', component: AsignaturasComponent},
   { path: 'curso', component: CursoComponent },
@@ -35,7 +32,9 @@ const appRoutes: Routes = [
     CursoComponent,
     NotasComponent,
     HomeComponent,
-    AsignaturasComponent
+    AsignaturasComponent,
+    BarraComponent,
+   
 
   ],
 
