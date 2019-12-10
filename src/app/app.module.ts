@@ -27,8 +27,7 @@ const appRoutes: Routes = [
   { path: 'notas', component: NotasComponent },
   { path: 'table', component: TableComponent },
   { path: 'register', component: RegisterComponent },
-  { path: '**', redirectTo: 'login' },
-  { path: 'notas', component: NotasComponent }
+  { path: '**', redirectTo: 'login' }
 ];
 
 @NgModule({
