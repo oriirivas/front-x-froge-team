@@ -18,8 +18,9 @@ const appRoutes: Routes = [
   {path: 'home', component: HomeComponent },
   { path: 'asignaturas', component: AsignaturasComponent},
   { path: 'curso', component: CursoComponent },
-  { path: '**', redirectTo: 'login' },
-  { path: 'notas', component: NotasComponent }
+  { path: 'notas', component: NotasComponent },
+  { path: '**', redirectTo: 'login' }
+
 ]
 
 @NgModule({
