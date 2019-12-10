@@ -1,38 +1,52 @@
-<app-barra></app-barra>
+<nav class="navbar navbar-dark bg-dark">
+  <nav class="navbar navbar-expand-lg">
+      <a class="navbar-brand" href="#">X Force</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+            <div class="navbar-nav">
+              <a class="nav-item nav-link" [routerLink]="['/home']">Inicio</a>
+              <a class="nav-item nav-link" [routerLink]="['/perfil']">Perfil</a>
+              <a class="nav-item nav-link" [routerLink]="['/curso']">Curso</a>
+              <a class="nav-item nav-link active" [routerLink]="['/notas']">Notas <span class= "sr-only">(current)</span></a> 
+          </div>
+      </div>
+  </nav>
+</nav>
 <br>
-<form>
-  <div class="form-group">
-    <label for="exampleFormControlInput1">Nombre del estudiante</label>
-    <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="Ingrese el nombre aqui">
+<div class="col-md-6">
+  <form>
+    <div class="form-group">
+      <label for="exampleFormControlInput1">Nombre del estudiante</label>
+      <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="Ingrese el nombre aqui">
+    </div>
+    <div class="form-group">
+      <label for="exampleFormControlSelect1">Seleccione el curso</label>
+      <select class="form-control" id="exampleFormControlSelect1">
+        <option>1</option>
+        <option>2</option>
+        <option>3</option>
+        <option>4</option>
+        <option>5</option>
+      </select>
+    </div>
+    <div class="form-group">
+      <label for="exampleFormControlSelect1">Seleccione la materia </label>
+      <select class="form-control" id="exampleFormControlSelect1">
+            <option>POO</option>
+            <option>FrontEnd</option>
+            <option>BackEnd</option>
+            <option>Base de datos</option>
+            <option>Canvas</option>
+      </select>
+    </div>
+  </form>
+  <div class="col-md-4">
+    <div class="chupame el ojo">
+      <label for="notasDefinitivas">Notas</label>
+      <br>
+      <label for=""></label>
+    </div>
   </div>
-  <div class="form-group">
-    <label for="exampleFormControlSelect1">Seleccione el curso</label>
-    <select class="form-control" id="exampleFormControlSelect1">
-      <option>1</option>
-      <option>2</option>
-      <option>3</option>
-      <option>4</option>
-      <option>5</option>
-    </select>
-  </div>
-  <div class="form-group">
-    <label for="exampleFormControlSelect2">Seleccione la materia</label>
-    <select multiple class="form-control" id="exampleFormControlSelect2">
-      <option>POO</option>
-      <option>FrontEnd</option>
-      <option>BackEnd</option>
-      <option>Base de datos</option>
-      <option>Canvas</option>
-    </select>
-  </div>
-</form>
-<br>
-
-<div class="form-check form-check-inline">
-  <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="option1">
-  <label class="form-check-label" for="inlineCheckbox1">Nota 1</label>
-</div>
-<div class="form-check form-check-inline">
-  <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="option1">
-  <label class="form-check-label" for="inlineCheckbox1">Nota 2</label>
 </div>
