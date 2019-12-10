@@ -11,7 +11,6 @@ import { HomeComponent } from './componets/home/home.component';
 import { BarraComponent } from './componets/barra/barra.component';
 import { AjustesComponent } from './componets/ajustes/ajustes.component';
 import { NotasComponent } from './componets/notas/notas.component';
-import { BarraProfesorComponent } from './componets/barra-profesor/barra-profesor.component';
 
 //y todo esto tambien para la ruta
 const appRoutes: Routes = [
@@ -37,8 +36,12 @@ const appRoutes: Routes = [
     HomeComponent,
     AsignaturasComponent,
     BarraComponent,
+<<<<<<< HEAD
+    
+=======
     AjustesComponent,
     BarraProfesorComponent,
+>>>>>>> 005b69145dbea72dbb3405b5e8bdbfa0799804eb
    
 
   ],
