@@ -1,18 +1,11 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-
 import { AppComponent } from './app.component';
 import { LoginComponent } from './componets/login/login.component';
 import { CursoComponent } from './componets/curso/curso.component';
-
-
 import { RouterModule, Routes } from '@angular/router';
-
 import { RegisterComponent } from './componets/register/register.component';
-
 import { NotasComponent } from './componets/notas/notas.component';
-
-
 import { TableComponent } from './componets/table/table.component';
 import { AsignaturasComponent } from './componets/asignaturas/asignaturas.component';
 
