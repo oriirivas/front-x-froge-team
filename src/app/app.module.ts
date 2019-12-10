@@ -5,13 +5,13 @@ import { LoginComponent } from './componets/login/login.component';
 import { CursoComponent } from './componets/curso/curso.component';
 import { RouterModule, Routes } from '@angular/router';
 import { RegisterComponent } from './componets/register/register.component';
-import { NotasComponent } from './componets/notas/notas.component';
 import { TableComponent } from './componets/table/table.component';
 import { AsignaturasComponent } from './componets/asignaturas/asignaturas.component';
 import { HomeComponent } from './componets/home/home.component';
-
 import { BarraComponent } from './componets/barra/barra.component';
 import { AjustesComponent } from './componets/ajustes/ajustes.component';
+import { NotasComponent } from './componets/notas/notas.component';
+import { BarraProfesorComponent } from './componets/barra-profesor/barra-profesor.component';
 
 //y todo esto tambien para la ruta
 const appRoutes: Routes = [
@@ -38,6 +38,7 @@ const appRoutes: Routes = [
     AsignaturasComponent,
     BarraComponent,
     AjustesComponent,
+    BarraProfesorComponent,
    
 
   ],
