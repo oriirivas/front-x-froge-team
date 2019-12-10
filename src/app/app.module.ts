@@ -3,21 +3,41 @@ import { NgModule } from '@angular/core';
 
 import { AppComponent } from './app.component';
 import { LoginComponent } from './componets/login/login.component';
+import { CursoComponent } from './componets/curso/curso.component';
 
 import { RouterModule, Routes } from '@angular/router';
+
 import { RegisterComponent } from './componets/register/register.component';
+
+import { HomeComponent } from './componets/home/home.component';
+import { AsignaturasComponent } from './componets/asignaturas/asignaturas.component';
+import { NotasComponent } from './componets/notas/notas.component';
+
+
+
 
 const appRoutes: Routes = [
   { path: 'login', component: LoginComponent },
-  { path: 'register', component: RegisterComponent }
-];
+  {path: 'home', component: HomeComponent },
+  { path: 'asignaturas', component: AsignaturasComponent},
+  { path: 'curso', component: CursoComponent },
+  { path: 'notas', component: NotasComponent },
+  { path: 'register', component: RegisterComponent },
+  { path: '**', redirectTo: 'login' }
+]
 
 @NgModule({
   declarations: [
     AppComponent,
     LoginComponent,
-    RegisterComponent
+    RegisterComponent,
+    CursoComponent,
+    NotasComponent,
+    HomeComponent,
+    AsignaturasComponent
+
   ],
+
   imports: [
     RouterModule.forRoot(
       appRoutes,
