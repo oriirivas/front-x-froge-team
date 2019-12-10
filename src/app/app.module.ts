@@ -9,6 +9,8 @@ import { NotasComponent } from './componets/notas/notas.component';
 import { TableComponent } from './componets/table/table.component';
 import { AsignaturasComponent } from './componets/asignaturas/asignaturas.component';
 import { HomeComponent } from './componets/home/home.component';
+import { NavDirective } from './componets/nav.directive';
+import { BarraComponent } from './componets/barra/barra.component';
 
 //y todo esto tambien para la ruta
 const appRoutes: Routes = [
@@ -31,7 +33,10 @@ const appRoutes: Routes = [
     CursoComponent,
     NotasComponent,
     HomeComponent,
-    AsignaturasComponent
+    AsignaturasComponent,
+    NavDirective,
+    BarraComponent,
+   
 
   ],
 
