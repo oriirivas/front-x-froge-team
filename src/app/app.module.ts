@@ -36,14 +36,7 @@ const appRoutes: Routes = [
     HomeComponent,
     AsignaturasComponent,
     BarraComponent,
-<<<<<<< HEAD
-    
-=======
-    AjustesComponent,
-    BarraProfesorComponent,
->>>>>>> 005b69145dbea72dbb3405b5e8bdbfa0799804eb
-   
-
+    AjustesComponent
   ],
 
   imports: [
