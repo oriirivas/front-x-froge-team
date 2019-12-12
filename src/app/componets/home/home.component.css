@@ -4,7 +4,7 @@
     width: 80px;
     height: 80px;
     margin-left: 30%;
-    margin-top: -7%;
+    margin-top: -15%;
 }
 
 .img-notas{
@@ -13,7 +13,7 @@
     width: 80px;
     height: 80px;
     margin-left: 20%;
-    margin-top: -7%;
+    margin-top: -15%;
 }
 .img-ajustes{
     border: solid 2px rgb(15, 221, 221);
@@ -28,7 +28,7 @@
     background-color: black;
     width: 80px;
     height: 80px;
-    margin-top: -7%;
+    margin-top: -15%;
     margin-left: -20%;
 }
 .img-material{
@@ -36,7 +36,7 @@
     background-color: black;
     width: 80px;
     height: 80px;
-    margin-top: -7%;
+    margin-top: -15%;
     margin-left: 20%;
 }
 .img-salir{
