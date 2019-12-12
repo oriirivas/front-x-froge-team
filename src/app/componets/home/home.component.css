@@ -1,1 +1,51 @@
+.img-user{
+    border: solid 2px rgb(15, 221, 221);
+    background-color: black;
+    width: 80px;
+    height: 80px;
+    margin-left: 30%;
+    margin-top: -7%;
+}
+
+.img-notas{
+    border: solid 2px rgb(15, 221, 221);
+    background-color: black;
+    width: 80px;
+    height: 80px;
+    margin-left: 20%;
+    margin-top: -7%;
+}
+.img-ajustes{
+    border: solid 2px rgb(15, 221, 221);
+    background-color: black;
+    width: 80px;
+    height: 80px;
+    margin-left: -25%;
+    margin-top: 15%;
+}
+.img-canvas{
+    border: solid 2px rgb(15, 221, 221);
+    background-color: black;
+    width: 80px;
+    height: 80px;
+    margin-top: -7%;
+    margin-left: -20%;
+}
+.img-material{
+    border: solid 2px rgb(15, 221, 221);
+    background-color: black;
+    width: 80px;
+    height: 80px;
+    margin-top: -7%;
+    margin-left: 20%;
+}
+.img-salir{
+    border: solid 2px rgb(15, 221, 221);
+    background-color: black;
+    width: 60px;
+    height: 60px;
+    margin-top: 0%;
+    margin-left: 70%;
+   
+}
 
