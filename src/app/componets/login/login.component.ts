@@ -10,9 +10,10 @@ import { LoginserviceService } from '../services/loginservice.service';
 export class LoginComponent implements OnInit {
   pass: string
   email: string
+  loginService: LoginserviceService
   constructor(
-    private router: Router,
-    private loginService: LoginserviceService) { }
+    private router  : Router,
+    private loginservice: LoginserviceService) { }
 
   ngOnInit() {
   }
@@ -25,15 +26,15 @@ export class LoginComponent implements OnInit {
 
   login(){
     console.log('soy el 1')
+    console.log(this.email, this.pass)
     let obs =  this.loginService.login(this.email, this.pass);
     obs.subscribe(validation  => {
       if(validation) {
         this.router.navigate(['/home']);
-      } else {
+      } else {  
         alert('usuario y pass inválidos');
       }
     });
-    
   }
 
 }
