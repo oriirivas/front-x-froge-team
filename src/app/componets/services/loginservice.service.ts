@@ -24,6 +24,7 @@ export class LoginserviceService {
     }
     let aux = this.http.post('http://localhost:8090/api/v1/login/sessions', body, this.headersOptions );
     debugger
+    
     return aux;
   }
 
