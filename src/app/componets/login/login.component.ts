@@ -25,8 +25,12 @@ export class LoginComponent implements OnInit {
     }
 
   login(){
+<<<<<<< HEAD
     console.log('soy el 1')
     console.log(this.email, this.pass)
+=======
+  
+>>>>>>> d103a5efd5bc7b7026c6ca9d8cecf2f2a4656fa9
     let obs =  this.loginService.login(this.email, this.pass);
     obs.subscribe(validation  => {
       if(validation) {

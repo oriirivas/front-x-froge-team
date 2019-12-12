@@ -11,6 +11,7 @@ import { HomeComponent } from './componets/home/home.component';
 import { BarraComponent } from './componets/barra/barra.component';
 import { AjustesComponent } from './componets/ajustes/ajustes.component';
 import { NotasComponent } from './componets/notas/notas.component';
+import { HttpClientModule } from '@angular/common/http';
 
 //y todo esto tambien para la ruta
 const appRoutes: Routes = [
@@ -39,16 +40,14 @@ const appRoutes: Routes = [
     AjustesComponent
   ],
 
-  imports: [
-    //de aquii para la ruta
-    RouterModule.forRoot(
-      appRoutes,
-      { enableTracing: true } // <-- debugging purposes only
-    ),
-    //aqui
-    BrowserModule
-  ],
-  providers: [],
-  bootstrap: [AppComponent]
+
+imports: [
+  BrowserModule,
+  HttpClientModule,
+  
+  RouterModule.forRoot(appRoutes, { useHash: true, scrollPositionRestoration: 'enabled' })
+],
+providers: [],
+bootstrap: [AppComponent]
 })
 export class AppModule { }
