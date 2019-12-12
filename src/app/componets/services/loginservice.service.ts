@@ -22,10 +22,12 @@ export class LoginserviceService {
       "emailDto": email,
       "passwordDto": pass
     }
-    let aux = this.http.post('http://localhost:8090/api/v1/login/sessions', body, this.headersOptions );
-    debugger
+    //let aux = this.http.post('http://localhost:8090/api/v1/login/sessions', body, this.headersOptions );
+    //debugger
     
-    return aux;
+    //return aux;
+    return this.http.post('http://localhost:8090/api/v1/login/sessions', body, this.headersOptions );
+    
   }
 
   public register(email:string, pass:string) {
