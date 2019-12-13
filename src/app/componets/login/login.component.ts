@@ -3,7 +3,7 @@ import { Router } from '@angular/router';
 import { LoginserviceService } from '../services/loginservice.service';
 
 @Component({
-  selector: 'app-login',
+  selector: 'login',
   templateUrl: './login.component.html',
   styleUrls: ['./login.component.css']
 })
@@ -26,14 +26,20 @@ export class LoginComponent implements OnInit {
   login(){
     console.log('soy el 1')
     console.log(this.email, this.pass)
-    let obs =  this.loginService.login(this.email, this.pass);
-    obs.subscribe(validation  => {
-      if(validation) {
+    //let obs =  this.loginService.login(this.email, this.pass);
+
+    //let validation= this.loginService.login(this.email, this.pass).subscribe;
+
+    //obs.subscribe(validation  => {
+      //console.log('llegueee',validation)
+      debugger
+      if(this.loginService.login(this.email, this.pass).subscribe) {
+        debugger
         this.router.navigate(['/home']);
       } else {  
-        alert('usuario y pass inválidos');
+        alert ('usuario y pass inválidos');
       }
-    });
+   // });
   }
 
 }

@@ -17,24 +17,47 @@ export class LoginserviceService {
 
   constructor(private http: HttpClient) { }
 
+  setToken(){}
+
+  getToken(){}
+
   public login(email: string, pass: string) {
     let body = {
       "emailDto": email,
       "passwordDto": pass
     }
-    let aux = this.http.post('http://localhost:8090/api/v1/login/sessions', body, this.headersOptions );
-    debugger
+    //let aux = this.http.post('http://localhost:8090/api/v1/login/sessions', body, this.headersOptions );
+    //debugger
     
-    return aux;
+    //return aux;
+    return this.http.post('http://localhost:8090/api/v1/login/sessions', body, this.headersOptions );
+    
   }
 
   public register(email:string, pass:string) {
     let body = {
-      "email": email,
-      "password": pass
+      "emailDto": email,
+      "passwordDto": pass
     }
     let aux = this.http.post('http://localhost:8090/api/v1/login', body, this.headersOptions );
     return aux; 
   }
+
+  /**/
+
+  public register2(email:string, pass:string, nombre: string, segundoNombre: string, apellido: string, segundoApellido: string, rut: string, rol: string) {
+    let body = {
+      "emailDto": email,
+      "passwordDto": pass,
+      "nombreDto": nombre,
+      "segundoNombreDto": segundoNombre,
+      "apellidoDto": apellido,
+      "segundoApellidoDto": segundoApellido,
+      "rutDto": rut,
+      "rolDto": rol
+    }
+    let aux = this.http.post('http://localhost:8090/api/v1/login', body, this.headersOptions );
+    return aux; 
+  } /**/
   }
 
