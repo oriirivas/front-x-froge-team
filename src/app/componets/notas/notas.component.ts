@@ -6,10 +6,13 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./notas.component.css']
 })
 export class NotasComponent implements OnInit {
+  
 
   constructor() { }
 
   ngOnInit() {
   }
+  
+  
+  }
 
-}
