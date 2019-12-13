@@ -27,10 +27,14 @@ export class LoginComponent implements OnInit {
     console.log('soy el 1')
     console.log(this.email, this.pass)
     //let obs =  this.loginService.login(this.email, this.pass);
-    //this.loginService.login(this.email, this.pass).subscribe;
+
+    //let validation= this.loginService.login(this.email, this.pass).subscribe;
+
     //obs.subscribe(validation  => {
       //console.log('llegueee',validation)
+      debugger
       if(this.loginService.login(this.email, this.pass).subscribe) {
+        debugger
         this.router.navigate(['/home']);
       } else {  
         alert ('usuario y pass inválidos');
