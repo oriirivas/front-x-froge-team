@@ -17,7 +17,6 @@ export class NotasComponent implements OnInit {
 
   ngOnInit() {
   }
-
   emailKeyup(value: string) {
     this.alumnos = value;
   }
@@ -35,8 +34,9 @@ export class NotasComponent implements OnInit {
     }
     return laNotas
   }
-
 }
+
+  
 
 
   
