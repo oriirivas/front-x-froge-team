@@ -23,17 +23,15 @@ export class LoginComponent implements OnInit {
       this.pass = value;
     }
 
-  login(){
+    loginUser() {
+      if(this.email == "joan" && this.pass =="123123"){
+        alert("Logeado")
   
-    let obs =  this.loginService.login(this.email, this.pass);
-    obs.subscribe(validation  => {
-      if(validation) {
-        this.router.navigate(['/home']);
       } else {
-        alert('usuario y pass inválidos');
+        alert("usuario inválido")
       }
-    });
+    };
     
   }
 
-}
+

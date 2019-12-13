@@ -1,4 +1,3 @@
-
 <!-- row: Filas de bootstrap -->
 <div class="row" style="margin: 0%; padding: 5%;" style="background-color: black;">
   <!-- col: Columnas de Bootstrap. máximo 12 por fila -->
@@ -22,7 +21,7 @@
                       <label for="exampleInputPassword1">contraseña</label>
                       <input (keyup)="passKeyup($event.target.value)" type="password" class="form-control" id="exampleInputPassword1">
                   </div>
-                  <button (click)="login" class="btn btn-primary">Iniciar Sesión</button>
+                  <button (click)="login()" class="btn btn-primary">Iniciar Sesión</button>
                   <a [routerLink]="['/register']">&nbsp;&nbsp;¿No tienes cuenta?</a><br>
 
           </div>

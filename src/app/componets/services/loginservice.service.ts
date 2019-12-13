@@ -17,12 +17,16 @@ export class LoginserviceService {
 
   constructor(private http: HttpClient) { }
 
+  setToken(){}
+
+  getToken(){}
+
   public login(email: string, pass: string) {
     let body = {
       "emailDto": email,
       "passwordDto": pass
     }
-    let aux = this.http.post('http://localhost:8090/api/v1/login/sessions', body, this.headersOptions );
+    let aux = this.http.post('http://localhost:8090/api/v1/login/#/home', body, this.headersOptions );
     return aux;
   }
   public register(email:string, pass:string) {

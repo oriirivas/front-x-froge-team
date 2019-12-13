@@ -1,9 +1,9 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { Routes, RouterModule } from '@angular/router';
 import { AppComponent } from './app.component';
 import { LoginComponent } from './componets/login/login.component';
 import { CursoComponent } from './componets/curso/curso.component';
-import { RouterModule, Routes } from '@angular/router';
 import { RegisterComponent } from './componets/register/register.component';
 import { TableComponent } from './componets/table/table.component';
 import { AsignaturasComponent } from './componets/asignaturas/asignaturas.component';
@@ -38,15 +38,12 @@ const appRoutes: Routes = [
     AsignaturasComponent,
     BarraComponent,
     AjustesComponent
-  ],
-
-
-imports: [
+  ],imports: [
   BrowserModule,
   HttpClientModule,
   
-  RouterModule.forRoot(appRoutes, { useHash: true, scrollPositionRestoration: 'enabled' })
-],
+  RouterModule.forRoot(appRoutes, {scrollPositionRestoration : 'enabled'})
+  ],
 providers: [],
 bootstrap: [AppComponent]
 })
