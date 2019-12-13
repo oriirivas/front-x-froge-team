@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
+import { CursoServiceService } from '../services/curso-service.service';
 
 @Component({
   selector: 'app-curso',
@@ -6,10 +8,31 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./curso.component.css']
 })
 export class CursoComponent implements OnInit {
-
-  constructor() { }
+  nombreCurso: string
+  
+  constructor(private router  : Router,
+    private cursoService: CursoServiceService) { }
 
   ngOnInit() {
   }
 
+  emailKeyup(value: string) {
+    this.nombreCurso = value;
+  }
+
+  crearCurso(){
+    let curso = this.cursoService.guardarCurso(this.nombreCurso);
+
+    if(this.nombreCurso != null){
+      alert('El curso '+curso+' esta creado')
+
+    }else{
+      alert ('no se creo el objeto')
+    }
+  }
+
 }
+
+
+
+  
