@@ -1,7 +1,11 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import { Routes, RouterModule } from '@angular/router';
 import { AppComponent } from './app.component';
+import { HttpClientModule } from '@angular/common/http';
+//import { RouterModule, Routes } from '@angular/router';
+import { Routes, RouterModule } from '@angular/router';
+
+
 import { LoginComponent } from './componets/login/login.component';
 import { CursoComponent } from './componets/curso/curso.component';
 import { RegisterComponent } from './componets/register/register.component';
@@ -11,7 +15,7 @@ import { HomeComponent } from './componets/home/home.component';
 import { BarraComponent } from './componets/barra/barra.component';
 import { AjustesComponent } from './componets/ajustes/ajustes.component';
 import { NotasComponent } from './componets/notas/notas.component';
-import { HttpClientModule } from '@angular/common/http';
+
 
 //y todo esto tambien para la ruta
 const appRoutes: Routes = [
@@ -26,6 +30,7 @@ const appRoutes: Routes = [
   { path: '**', redirectTo: 'login' }
 ];
 
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -37,13 +42,14 @@ const appRoutes: Routes = [
     HomeComponent,
     AsignaturasComponent,
     BarraComponent,
+    
     AjustesComponent
   ],imports: [
   BrowserModule,
   HttpClientModule,
-  
-  RouterModule.forRoot(appRoutes, {scrollPositionRestoration : 'enabled'})
-  ],
+  //NgModule,
+  RouterModule.forRoot(appRoutes, { useHash: true, scrollPositionRestoration: 'enabled' })
+],
 providers: [],
 bootstrap: [AppComponent]
 })

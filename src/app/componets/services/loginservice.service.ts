@@ -26,9 +26,19 @@ export class LoginserviceService {
       "emailDto": email,
       "passwordDto": pass
     }
+<<<<<<< HEAD
     let aux = this.http.post('http://localhost:8090/api/v1/login/#/home', body, this.headersOptions );
     return aux;
+=======
+    //let aux = this.http.post('http://localhost:8090/api/v1/login/sessions', body, this.headersOptions );
+    //debugger
+    
+    //return aux;
+    return this.http.post('http://localhost:8090/api/v1/login/sessions', body, this.headersOptions );
+    
+>>>>>>> b6a7a2b2daedcd287cb262cf0fae6638b08c0f1f
   }
+
   public register(email:string, pass:string) {
     let body = {
       "email": email,

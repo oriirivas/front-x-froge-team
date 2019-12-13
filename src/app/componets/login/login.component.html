@@ -3,7 +3,7 @@
   <!-- col: Columnas de Bootstrap. máximo 12 por fila -->
   <div class="col-12 login-pane" align="center">
       <div class="col-4"align="center">
-          <h2 style="color: blanchedalmond;">Bienvenido Amigo</h2>
+          <h2 style="color: blanchedalmond;">Bienvenido amigo</h2>
             &nbsp;&nbsp;<img src="assets\img\user.svg"  width="250" height="150" alt="...">
       </div>  
   <div class="col-4" align="center">
@@ -21,8 +21,13 @@
                       <label for="exampleInputPassword1">contraseña</label>
                       <input (keyup)="passKeyup($event.target.value)" type="password" class="form-control" id="exampleInputPassword1">
                   </div>
+<<<<<<< HEAD
                   <button (click)="login()" class="btn btn-primary">Iniciar Sesión</button>
                   <a [routerLink]="['/register']">&nbsp;&nbsp;¿No tienes cuenta?</a><br>
+=======
+                    <button (click)="login()" class="btn btn-primary">Iniciar Sesión</button>
+                    <a [routerLink]="['/register']">&nbsp;&nbsp;¿No tienes cuenta?</a><br>
+>>>>>>> b6a7a2b2daedcd287cb262cf0fae6638b08c0f1f
 
           </div>
       </div>
