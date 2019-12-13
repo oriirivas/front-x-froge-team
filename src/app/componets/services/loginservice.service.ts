@@ -17,6 +17,10 @@ export class LoginserviceService {
 
   constructor(private http: HttpClient) { }
 
+  setToken(){}
+
+  getToken(){}
+
   public login(email: string, pass: string) {
     let body = {
       "emailDto": email,
