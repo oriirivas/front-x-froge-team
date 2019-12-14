@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-import { LoginserviceService } from '../services/loginservice.service';
-
+import { LoginserviceService } from '../../componets/services/loginservice.service';
 @Component({
   selector: 'login',
   templateUrl: './login.component.html',
@@ -11,8 +10,9 @@ export class LoginComponent implements OnInit {
   pass: string
   email: string
   constructor(
-    private router  : Router,
-    private loginService: LoginserviceService) { }
+    private router: Router,
+    private loginService: LoginserviceService
+  ) { }
 
   ngOnInit() {
   }
@@ -20,26 +20,19 @@ export class LoginComponent implements OnInit {
     this.email = value;
   }
   passKeyup(value: string) {
-      this.pass = value;
-    }
-
-  login(){
+    this.pass = value;
+  }
+  login() {
     console.log('soy el 1')
-    console.log(this.email, this.pass)
-    //let obs =  this.loginService.login(this.email, this.pass);
-
-    //let validation= this.loginService.login(this.email, this.pass).subscribe;
-
-    //obs.subscribe(validation  => {
-      //console.log('llegueee',validation)
-      debugger
-      if(this.loginService.login(this.email, this.pass).subscribe) {
-        debugger
+    let obs = this.loginService.login(this.email, this.pass);
+    obs.subscribe(validation  => {
+      if(validation) {
         this.router.navigate(['/home']);
-      } else {  
-        alert ('usuario y pass inválidos');
+      } else {
+        alert('usuario y pass inválidos');
       }
-   // });
+    });
+ 
   }
 
 }

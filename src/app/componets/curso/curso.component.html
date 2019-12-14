@@ -16,12 +16,14 @@
   <a class="nav-item nav-link" [routerLink]="['/login']" align = "left">Cerrar Sesion</a>
 </nav>
 <br><br>
+<h2>Bienvenido</h2>
+<h3>Aqui puedes crear un curso</h3>
 <div class="col-md-3">
   <form>
     Nombre del curso
     <div class="row">
       <div class="col">
-        <input type="text" class="form-control" placeholder="Nombre">
+        <input type="text" class="form-control" placeholder="Nombre" (keyup)="cursoKeyup($event.target.value)">
       </div>
     </div><br><br>
   </form>

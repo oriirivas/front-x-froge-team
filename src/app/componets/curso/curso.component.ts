@@ -16,7 +16,7 @@ export class CursoComponent implements OnInit {
   ngOnInit() {
   }
 
-  emailKeyup(value: string) {
+  cursoKeyup(value: string) {
     this.nombreCurso = value;
   }
 

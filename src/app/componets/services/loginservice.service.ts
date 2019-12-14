@@ -30,16 +30,18 @@ export class LoginserviceService {
     //debugger
     
     //return aux;
-    return this.http.post('http://localhost:8090/api/v1/login/sessions', body, this.headersOptions );
+    return this.http.post('http://localhost:8090/api/v1/Person/vaidate', body, this.headersOptions );
     
   }
+  
 
-  public register(email:string, pass:string) {
+  public register(email:string, pass:string, name:string) {
     let body = {
-      "emailDto": email,
-      "passwordDto": pass
+      "email": email,
+      "password": pass,
+      "name": name
     }
-    let aux = this.http.post('http://localhost:8090/api/v1/login', body, this.headersOptions );
+    let aux = this.http.post('http://localhost:8090/api/v1/Person', body, this.headersOptions );
     return aux; 
   }
 

@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-
-import { LoginserviceService } from '../services/loginservice.service';
 import { Router } from '@angular/router';
+import { LoginserviceService } from '../../componets/services/loginservice.service';
+
 
 @Component({
   selector: 'app-register',
@@ -57,7 +57,7 @@ export class RegisterComponent implements OnInit {
 
   register() {
     if(this.pass === this.repass) {
-      this.loginService.register(this.email, this.pass).subscribe(res => {
+      this.loginService.register(this.email, this.pass,this.nombre).subscribe(res => {
         console.log('respuesta', res);
         this.router.navigate(['/login']);
       });
@@ -68,7 +68,7 @@ export class RegisterComponent implements OnInit {
 
   register2() {
     if(this.pass === this.repass) {
-      this.loginService.register(this.email, this.pass).subscribe(res => {
+      this.loginService.register(this.email, this.pass, this.nombre).subscribe(res => {
         console.log('respuesta', res);
         this.router.navigate(['/login']);
       });
