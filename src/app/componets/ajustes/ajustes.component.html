@@ -24,8 +24,12 @@
         
         <div class="form-group col-md-4">
           <label for="inputContraseña4" style="color: blanchedalmond;">Contraseña</label>
-          <input type="contraseña" class="form-control" id="inputContraseña4">
+          <input type="password" class="form-control" id="inputContraseña4">
         </div>
+        <div class="form-group col-md-4">
+            <label for="inputConfirmarContraseña4" style="color: blanchedalmond;">Confirmar Contraseña</label>
+            <input type="password" class="form-control" id="inputConfirmarContraseña4">
+          </div>
 
         <div class="form-group col-md-4">
           <label for="inputEmail" style="color: blanchedalmond;">Email</label>
@@ -33,5 +37,6 @@
         </div>
       </div>
         <button type="submit" class="btn btn-primary">Aceptar</button>
+        <a [routerLink]="['/home']">&nbsp;&nbsp;Salir</a><br>
       </form>
 </div>
