@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
 import { Router } from '@angular/router';
-import { NotasServiceService } from '../services/notas-service.service';
+import { NotasServiceService } from '../../componets/services/notas-service.service';
 
 @Component({
   selector: 'app-notas',
@@ -29,11 +29,26 @@ export class NotasComponent implements OnInit {
     let laNotas = null;
     if(notas != null){
         laNotas= notas;
+        alert('se agrego correctamenet '+laNotas)
     }else {  
         alert ('error');
     }
     return laNotas
   }
+
+  guardarNotas(){
+    if(this.alumnos != null && this.asignatura != null){
+      let notas = this.notaService.guardarNotas(this.alumnos,this.asignatura);
+      if(notas){
+        alert('la nota se ha guaraddo')
+      }else{
+      alert ('no se creo el objeto')}
+    }
+  }
+
+
+
+  
 }
 
   

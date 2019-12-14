@@ -50,3 +50,45 @@ borrarCurso(id: String){
 }
 
 }
+
+
+/**
+ * 
+ * amigo creo que mesclaste lo que van el servicio con lo que va en el ts del componets esto creo que seria lo que va
+ * 
+ * import { Injectable } from '@angular/core';
+import { HttpClient } from '@angular/common/http';
+
+@Injectable({
+  providedIn: 'root'
+})
+export class CursoServiceService {
+  private headersOptions = {
+    headers: {
+        'Content-Type': 'application/json',
+        'Access-Control-Allow-Origin': '*',
+        'Access-Control-Allow-Credentials': 'true',
+        'Access-Control-Allow-Methods': 'POST, GET, PUT, OPTIONS, HEAD, DELETE',
+        'Access-Control-Allow-Headers': 'Content-Type, Accept, X-Requested-With, remember-me'
+    }
+  };
+
+  constructor(private http: HttpClient) { }
+
+  setToken(){}
+
+  getToken(){}
+
+  public crearCurso(name: string) {
+    let body = {
+      "esteNombre": name (el "esteNombre" debe ser igual a que sale en la api )
+    }
+    return this.http.post('http://localhost:8090/api/v1/Person/vaidate', body, this.headersOptions );
+    
+  }
+  
+  } 
+
+
+ * 
+ */

@@ -17,7 +17,7 @@ export class NotasServiceService {
 
   constructor(private http: HttpClient) { }
   /**
-   * metdo que gurdara las notas
+   * metdo que trae las notas las notas
    * @param nombre 
    * @param asignatura 
    */
@@ -28,6 +28,15 @@ export class NotasServiceService {
     }
     const url_api = 'url';
     return url_api
+  }
+
+  public guardarNotas(alumnos: string,asignatura: string) {
+    let body = {
+      "alumno": alumnos,
+      "asignatura": asignatura
+    }
+    return this.http.post('http://localhost:8090/api/v1/Person/vaidate', body, this.headersOptions );
+    
   }
 
 

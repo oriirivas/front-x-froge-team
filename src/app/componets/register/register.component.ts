@@ -58,7 +58,7 @@ export class RegisterComponent implements OnInit {
   register() {
     if(this.pass === this.repass) {
       this.loginService.register(this.email, this.pass,this.nombre).subscribe(res => {
-        console.log('respuesta', res);
+        alert("Guradado con exito")
         this.router.navigate(['/login']);
       });
     } else {

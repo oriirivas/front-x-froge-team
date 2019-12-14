@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-import { CursoServiceService } from '../services/curso-service.service';
+import { CursoServiceService } from '../../componets/services/curso-service.service';
 
 @Component({
   selector: 'app-curso',
@@ -21,13 +21,12 @@ export class CursoComponent implements OnInit {
   }
 
   crearCurso(){
-    let curso = this.cursoService.guardarCurso(this.nombreCurso);
-
     if(this.nombreCurso != null){
-      alert('El curso '+curso+' esta creado')
-
-    }else{
-      alert ('no se creo el objeto')
+      let curso = this.cursoService.guardarCurso(this.nombreCurso);
+      if(curso){
+        alert('El curso '+this.nombreCurso+' esta creado')
+      }else{
+        alert ('no se creo el objeto')}
     }
   }
 
