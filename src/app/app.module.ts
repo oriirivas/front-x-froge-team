@@ -17,6 +17,8 @@ import { AjustesComponent } from './componets/ajustes/ajustes.component';
 import { NotasComponent } from './componets/notas/notas.component';
 
 
+
+
 //y todo esto tambien para la ruta
 const appRoutes: Routes = [
   { path: 'login', component: LoginComponent },
@@ -29,6 +31,8 @@ const appRoutes: Routes = [
   { path: 'register', component: RegisterComponent },
   { path: '**', redirectTo: 'login' }
 ];
+
+
 
 
 @NgModule({
@@ -47,6 +51,7 @@ const appRoutes: Routes = [
   ],imports: [
   BrowserModule,
   HttpClientModule,
+  
   //NgModule,
   RouterModule.forRoot(appRoutes, { useHash: true, scrollPositionRestoration: 'enabled' })
 ],

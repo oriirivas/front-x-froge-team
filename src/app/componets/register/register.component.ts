@@ -56,6 +56,7 @@ export class RegisterComponent implements OnInit {
 
 
   register() {
+    //console.log(dato)
     if(this.pass === this.repass) {
       this.loginService.register(this.email, this.pass,this.nombre).subscribe(res => {
         alert("Guradado con exito")
