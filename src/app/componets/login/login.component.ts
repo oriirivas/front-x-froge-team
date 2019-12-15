@@ -28,7 +28,7 @@ export class LoginComponent implements OnInit {
     obs.subscribe(validation  => {
       if(validation) {
         this.router.navigate(['/home']);
-      } else {
+      }else {
         alert('usuario y pass inválidos');
       }
     });

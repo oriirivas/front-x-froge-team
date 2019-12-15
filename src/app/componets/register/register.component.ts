@@ -68,15 +68,19 @@ export class RegisterComponent implements OnInit {
   }
 
   register2() {
-    if(this.pass === this.repass) {
-      this.loginService.register(this.email, this.pass, this.nombre).subscribe(res => {
-        console.log('respuesta', res);
-        this.router.navigate(['/login']);
-      });
-    } else {
-      alert("Contraseñas diferentes");
+    if(this.email != null && this.nombre != null && this.segundoNombre != null && this.apellido != null && this.segundoApellido != null && this.pass != null && this.rut != null && this.rol != null){
+      if(this.pass === this.repass) {
+        this.loginService.register(this.email, this.pass, this.nombre).subscribe(res => {
+          console.log('respuesta', res);
+          this.router.navigate(['/login']);
+        });
+      } else {
+        alert("Contraseñas diferentes");
+      }
+    } else{
+      alert('no ha ingresado todo los datos')
     }
-  }
 
+  }
 
 }

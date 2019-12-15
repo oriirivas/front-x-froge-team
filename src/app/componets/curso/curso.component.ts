@@ -22,8 +22,8 @@ export class CursoComponent implements OnInit {
 
   crearCurso(){
     if(this.nombreCurso != null){
-      let curso = this.cursoService.guardarCurso(this.nombreCurso);
-      if(curso){
+      //let curso = this.cursoService.guardarCurso(this.nombreCurso);
+      if(this.nombreCurso){
         alert('El curso '+this.nombreCurso+' esta creado')
       }else{
         alert ('no se creo el objeto')}
