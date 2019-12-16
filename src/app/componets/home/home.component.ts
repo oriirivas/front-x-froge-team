@@ -9,14 +9,15 @@ import { Router } from '@angular/router';
 export class HomeComponent implements OnInit {
   profesor: boolean = true
 
-  constructor() { }
+  constructor(private router: Router,) { }
 
   ngOnInit() {
   }
 
   esProfe(){
       if(this.profesor){
-        alert('puedes entar')
+        alert('puedes entrar')
+        this.router.navigate(['/notas'])
       }else{
         alert ('no puedes solo profes')}
   }

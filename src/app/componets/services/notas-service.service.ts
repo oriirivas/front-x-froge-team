@@ -21,29 +21,29 @@ export class NotasServiceService {
    * @param nombre 
    * @param asignatura 
    */
-  public getNota(nombre: string, asignatura: string) {
+  /*public getNota(nombre: string, asignatura: number) {
     let body = {
       "nombreDto": nombre,
       "asignaturadDto": asignatura
     }
     const url_api = 'url';
     return url_api
-  }
+  }*/
 
-  public guardarNotas(rut: string,asignatura: string, nota1: string, nota2: string, nota3: string, nota4: string, Control1: string, control2: string, control3: string,control4: string) {
+  public guardarNotas(rut: string ,asignatura: number, nota1: number, nota2: number, nota3: number, nota4: number, Control1: number, control2: number, control3: number,control4: number, promedioNota: number, promedioControl: number) {
+    debugger
     let body = {
         "control1Dto": Control1,
         "control2Dto": control2,
         "control3Dto": control3,
         "control4Dto": control4,
         "idAsignaturaDto": asignatura,
-        
         "nota1Dto": nota1,
         "nota2Dto": nota2,
         "nota3Dto": nota3,
         "nota4Dto": nota4,
-        "promedioControlesDto": 12,
-        "promedioNotasDto": 12,
+        "promedioControlesDto": promedioControl,
+        "promedioNotasDto": promedioNota,
         "rutDto": rut
     }
     return this.http.post('http://localhost:8090/api/v1/notas', body, this.headersOptions );

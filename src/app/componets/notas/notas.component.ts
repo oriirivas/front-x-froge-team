@@ -10,16 +10,18 @@ import { NotasServiceService } from '../../componets/services/notas-service.serv
 })
 export class NotasComponent implements OnInit {
   rut: string
-  asignatura: string
-  id: string
-  nota1: string
-  nota2: string
-  nota3: string
-  nota4: string
-  control1: string
-  control2: string
-  control3: string
-  control4: string
+  asignatura: number
+  id: number
+  nota1: number
+  nota2: number
+  nota3: number
+  nota4: number
+  control1: number
+  control2: number
+  control3: number
+  control4: number
+  promedioNota: number=3
+  promedioControl: number=2
 
 
   constructor(private router  : Router,
@@ -27,53 +29,54 @@ export class NotasComponent implements OnInit {
 
   ngOnInit() {
   }
+  
   rutKeyup(value: string) {
     this.rut = value;
   }
-  passKeyup(value: string) {
+  passKeyup(value: number) {
       this.asignatura = value;
   }
 
-  nota1Keyup(value: string) {
+  nota1Keyup(value: number) {
     this.nota1 = value;
   }
-  nota2Keyup(value: string) {
+  nota2Keyup(value: number) {
       this.nota2 = value;
   }
-  nota3Keyup(value: string) {
+  nota3Keyup(value: number) {
     this.nota3 = value;
   }
-  nota4Keyup(value: string) {
+  nota4Keyup(value: number) {
       this.nota4 = value;
   }
-  control1Keyup(value: string) {
+  control1Keyup(value: number) {
     this.control1 = value;}
 
-  control2Keyup(value: string) {
+  control2Keyup(value: number) {
     this.control2 = value;
   }
-  control3Keyup(value: string) {
+  control3Keyup(value: number) {
       this.control3 = value;
   }
-  control4Keyup(value: string) {
+  control4Keyup(value: number) {
     this.control4 = value;
 }
 
 
   idPoo(){
-    this.id= "2"
+    this.id=2
   }
   idFE(){
-    this.id= "3"
+    this.id=3
   }
   idBE(){
-    this.id= "4"
+    this.id=4
   }
   idBD(){
-    this.id= "7"
+    this.id=5
   }
   idCanvas(){
-    this.id= "6"
+    this.id=6
   }
   /*
   getNotas(){
@@ -90,27 +93,30 @@ export class NotasComponent implements OnInit {
 
   promedioNotas(){
     
-    let sum = (this.nota1+this.nota2+this.nota3+this.nota4)
+    this.promedioNota=2
+
+  }
+
+  promedioControles(){
+
+    this.promedioControl=3
 
   }
 
   guardarNotas(){
-    console.log(this.rut,this.id)
+    console.log(this.promedioControl,this.promedioNota)
+    debugger
     if(this.rut != null && this.id != null){
-      let notas = this.notaService.guardarNotas(this.id,this.rut,this.nota1,this.nota2,this.nota3,this.nota4,this.control1,this.control2,this.control3,this.control4);
-      if(notas){
+      let obs = this.notaService.guardarNotas(this.rut,this.id,this.nota1,this.nota2,this.nota3,this.nota4,this.control1,this.control2,this.control3,this.control4,this.promedioNota,this.promedioControl).subscribe;
+      if(obs != null){
         alert('la nota se ha guaraddo')
       }else{
-      alert ('no se creo el objeto')}
+      alert ('no se creo la notas')
+      }
     }
   }
-
-
-
-  
 }
 
-  
 
 
   

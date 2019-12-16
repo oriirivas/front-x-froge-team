@@ -15,31 +15,31 @@
   </nav>
 </nav>
 <br>
-<div class="col-md-6">
+<div class="col-md-12">
   <form>
     <div class="form-group">
       <label for="exampleFormControlInput1">Rut del estudiante</label>
       <input (keyup)="rutKeyup($event.target.value)" class="form-control" id="exampleFormControlInput1" placeholder="Ingrese el nombre aqui">
     </div>
-    <div class="form-group">
-      <label for="exampleFormControlSelect1">Seleccione el curso</label>
-      <select class="form-control" id="exampleFormControlSelect1">
-        <option>1</option>
-        <option>2</option>
-        <option>3</option>
-        <option>4</option>
-        <option>5</option>
-      </select>
+    
+    <div class="btn-group btn-group-toggle" data-toggle="buttons">
+      <label class="btn btn-secondary active">
+        <input (click)="idPoo()" type="radio" name="options" id="option1" checked> POO
+      </label>
+      <label class="btn btn-secondary">
+        <input (click)="idFE()" type="radio" name="options" id="option2"> FrontEnd
+      </label>
+      <label class="btn btn-secondary">
+        <input (click)="idBE()" type="radio" name="options" id="option3"> BackEnd
+      </label>
+      <label class="btn btn-secondary">
+        <input (click)="idBD()" type="radio" name="options" id="option2"> Base de datos
+      </label>
+      <label class="btn btn-secondary">
+        <input (click)="idCanvas()" type="radio" name="options" id="option3"> canvas
+      </label>
     </div>
-    <div class="form-group">
-      <label for="exampleFormControlSelect1">Seleccione la materia </label>&nbsp;&nbsp;
-      <button (click)="idPoo()" class="btn btn-primary">POO</button>&nbsp;&nbsp;
-      <button (click)="idFE()" class="btn btn-primary">FrontEnd</button>&nbsp;&nbsp;
-      <button (click)="idBE()" class="btn btn-primary">BackEnd</button>&nbsp;&nbsp;
-      <button (click)="idBD()" class="btn btn-primary">Base de datos</button>&nbsp;&nbsp;
-      <button (click)="idCanvas()" class="btn btn-primary">Canvas</button>
-      
-    </div>
+    
   </form>
 </div>
 <br>
@@ -59,7 +59,7 @@
     <input (keyup)="nota3Keyup($event.target.value)" type="notaTres" class="form-control" id="exampleFormControlInput1" placeholder="Ingrese la nota aquí">
     <br>
     <label for="notaCuatroLabel">Nota 4</label>
-    <input (keyup)="nota3Keyup($event.target.value)" type="notaCuatro" class="form-control" id="exampleFormControlInput1" placeholder="Ingrese la nota aquí">
+    <input (keyup)="nota4Keyup($event.target.value)" type="notaCuatro" class="form-control" id="exampleFormControlInput1" placeholder="Ingrese la nota aquí">
     <br>
     <br>
     <br>

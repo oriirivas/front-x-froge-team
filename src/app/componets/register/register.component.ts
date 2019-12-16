@@ -64,6 +64,9 @@ export class RegisterComponent implements OnInit {
 
 
   register() {
+    if(this.email==null,this.pass==null,this.nombre == null, this.segundoApellido == null, this.apellido== null,this.segundoApellido,this.rut== null){
+      alert('porfavor ingrese todo los datos')
+    }else{
     console.log(this.rol);
     if(this.pass === this.repass) {
       this.loginService.register(this.email, this.pass,this.nombre).subscribe(res => {
@@ -73,6 +76,7 @@ export class RegisterComponent implements OnInit {
     } else {
       alert("Contraseñas diferentes");
     }
+  }
   }
 
   register2() {
