@@ -30,12 +30,23 @@ export class NotasServiceService {
     return url_api
   }
 
-  public guardarNotas(alumnos: string,asignatura: string) {
+  public guardarNotas(rut: string,asignatura: string, nota1: string, nota2: string, nota3: string, nota4: string, Control1: string, control2: string, control3: string,control4: string) {
     let body = {
-      "alumno": alumnos,
-      "asignatura": asignatura
+        "control1Dto": Control1,
+        "control2Dto": control2,
+        "control3Dto": control3,
+        "control4Dto": control4,
+        "idAsignaturaDto": asignatura,
+        
+        "nota1Dto": nota1,
+        "nota2Dto": nota2,
+        "nota3Dto": nota3,
+        "nota4Dto": nota4,
+        "promedioControlesDto": 12,
+        "promedioNotasDto": 12,
+        "rutDto": rut
     }
-    return this.http.post('http://localhost:8090/api/v1/Person/vaidate', body, this.headersOptions );
+    return this.http.post('http://localhost:8090/api/v1/notas', body, this.headersOptions );
     
   }
 

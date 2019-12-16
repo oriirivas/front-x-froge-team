@@ -18,8 +18,8 @@
 <div class="col-md-6">
   <form>
     <div class="form-group">
-      <label for="exampleFormControlInput1">Nombre del estudiante</label>
-      <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="Ingrese el nombre aqui">
+      <label for="exampleFormControlInput1">Rut del estudiante</label>
+      <input (keyup)="rutKeyup($event.target.value)" class="form-control" id="exampleFormControlInput1" placeholder="Ingrese el nombre aqui">
     </div>
     <div class="form-group">
       <label for="exampleFormControlSelect1">Seleccione el curso</label>
@@ -32,14 +32,13 @@
       </select>
     </div>
     <div class="form-group">
-      <label for="exampleFormControlSelect1">Seleccione la materia </label>
-      <select class="form-control" id="exampleFormControlSelect1">
-            <option>POO</option>
-            <option>FrontEnd</option>
-            <option>BackEnd</option>
-            <option>Base de datos</option>
-            <option>Canvas</option>
-      </select>
+      <label for="exampleFormControlSelect1">Seleccione la materia </label>&nbsp;&nbsp;
+      <button (click)="idPoo()" class="btn btn-primary">POO</button>&nbsp;&nbsp;
+      <button (click)="idFE()" class="btn btn-primary">FrontEnd</button>&nbsp;&nbsp;
+      <button (click)="idBE()" class="btn btn-primary">BackEnd</button>&nbsp;&nbsp;
+      <button (click)="idBD()" class="btn btn-primary">Base de datos</button>&nbsp;&nbsp;
+      <button (click)="idCanvas()" class="btn btn-primary">Canvas</button>
+      
     </div>
   </form>
 </div>
@@ -51,16 +50,16 @@
     <br>
     <br>
     <label for="notaUnoLabel">Nota 1</label>
-    <input type="notaUno" class="form-control" id="exampleFormControlInput1" placeholder="Ingrese la nota aquí">
+    <input (keyup)="nota1Keyup($event.target.value)" type="notaUno" class="form-control" id="exampleFormControlInput1" placeholder="Ingrese la nota aquí">
     <br>
     <label for="notaDosLabel">Nota 2</label>
-    <input type="notaDos" class="form-control" id="exampleFormControlInput1" placeholder="Ingrese la nota aquí">
+    <input (keyup)="nota2Keyup($event.target.value)" type="notaDos" class="form-control" id="exampleFormControlInput1" placeholder="Ingrese la nota aquí">
     <br>
     <label for="notaTresLabel">Nota 3</label>
-    <input type="notaTres" class="form-control" id="exampleFormControlInput1" placeholder="Ingrese la nota aquí">
+    <input (keyup)="nota3Keyup($event.target.value)" type="notaTres" class="form-control" id="exampleFormControlInput1" placeholder="Ingrese la nota aquí">
     <br>
     <label for="notaCuatroLabel">Nota 4</label>
-    <input type="notaCuatro" class="form-control" id="exampleFormControlInput1" placeholder="Ingrese la nota aquí">
+    <input (keyup)="nota3Keyup($event.target.value)" type="notaCuatro" class="form-control" id="exampleFormControlInput1" placeholder="Ingrese la nota aquí">
     <br>
     <br>
     <br>
@@ -74,22 +73,22 @@
     <br>
     <br>
     <label for="controlUnoLabel">Control 1</label>
-    <input type="controlUno" class="form-control" id="exampleFormControlInput1" placeholder="Ingrese la nota aquí">
+    <input (keyup)="control1Keyup($event.target.value)" type="controlUno" class="form-control" id="exampleFormControlInput1" placeholder="Ingrese la nota aquí">
     <br>
     <label for="controlDosLabel">Control 2</label>
-    <input type="controlDos" class="form-control" id="exampleFormControlInput1" placeholder="Ingrese la nota aquí">
+    <input (keyup)="control2Keyup($event.target.value)" type="controlDos" class="form-control" id="exampleFormControlInput1" placeholder="Ingrese la nota aquí">
     <br>
     <label for="controlTresLabel">Control 3</label>
-    <input type="controlTres" class="form-control" id="exampleFormControlInput1" placeholder="Ingrese la nota aquí">
+    <input (keyup)="control3Keyup($event.target.value)" type="controlTres" class="form-control" id="exampleFormControlInput1" placeholder="Ingrese la nota aquí">
     <br>
     <label for="controlCuatroLabel">Control 4</label>
-    <input type="controlCuatro" class="form-control" id="exampleFormControlInput1" placeholder="Ingrese la nota aquí">
+    <input (keyup)="control4Keyup($event.target.value)" type="controlCuatro" class="form-control" id="exampleFormControlInput1" placeholder="Ingrese la nota aquí">
     <br>
     <br>
     <br>
     <label for="promedioMateria"><h4>Promedio controles</h4></label>
     <input type="notaUno" class="form-control" id="exampleFormControlInput1" placeholder="Ingrese la nota aquí">
      <br>
-     <button (click)="crearCurso()" class="btn btn-primary">Aceptar</button>
+     <button (click)="guardarNotas()" class="btn btn-primary">Aceptar</button>
   </div>
 <!--</div>-->
