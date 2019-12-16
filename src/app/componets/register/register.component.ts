@@ -55,12 +55,12 @@ export class RegisterComponent implements OnInit {
   }
   
 
-  profe(){
+  /*profe(){
     this.rol = "profesor";
   }
   alumno(){
     this.rol = "alumno";
-  }
+  }*/
 
 
   register() {

@@ -105,17 +105,19 @@ export class NotasComponent implements OnInit {
 
   guardarNotas(){
     console.log(this.promedioControl,this.promedioNota)
-    debugger
     if(this.rut != null && this.id != null){
-      let obs = this.notaService.guardarNotas(this.rut,this.id,this.nota1,this.nota2,this.nota3,this.nota4,this.control1,this.control2,this.control3,this.control4,this.promedioNota,this.promedioControl).subscribe;
-      if(obs != null){
+      let obs = this.notaService.guardarNotas(this.rut,this.id,this.nota1,this.nota2,this.nota3,this.nota4,this.control1,this.control2,this.control3,this.control4,this.promedioNota,this.promedioControl);
+      obs.subscribe(validation  => {
+      if(validation != null){
         alert('la nota se ha guaraddo')
       }else{
       alert ('no se creo la notas')
       }
-    }
+    });
+    }  
   }
 }
+
 
 
 
