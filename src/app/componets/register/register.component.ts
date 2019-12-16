@@ -50,16 +50,24 @@ export class RegisterComponent implements OnInit {
   rutKeyup(value: string) {
     this.rut = value;
   }
-  rolKeyup(value: string) {
+  alumnoKeyup(value: string) {
     this.rol = value;
+  }
+  
+
+  profe(){
+    this.rol = "profesor";
+  }
+  alumno(){
+    this.rol = "alumno";
   }
 
 
   register() {
-    //console.log(dato)
+    console.log(this.rol);
     if(this.pass === this.repass) {
       this.loginService.register(this.email, this.pass,this.nombre).subscribe(res => {
-        alert("Guradado con exito")
+        alert("Guardado con exito")
         this.router.navigate(['/login']);
       });
     } else {

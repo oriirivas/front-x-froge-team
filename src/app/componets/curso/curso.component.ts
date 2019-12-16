@@ -22,14 +22,16 @@ export class CursoComponent implements OnInit {
 
   crearCurso(){
     if(this.nombreCurso != null){
-      //let curso = this.cursoService.guardarCurso(this.nombreCurso);
-      if(this.nombreCurso){
+      let obs = this.cursoService.crearCurso(this.nombreCurso);
+      obs.subscribe(validation  => {
+      if(validation) {
         alert('El curso '+this.nombreCurso+' esta creado')
-      }else{
-        alert ('no se creo el objeto')}
-    }
+      }else {
+        alert ('no se creo el objeto')
+      }
+    });
   }
-
+}
 }
 
 

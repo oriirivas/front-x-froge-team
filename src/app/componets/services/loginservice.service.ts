@@ -26,7 +26,7 @@ export class LoginserviceService {
       "emailDto": email,
       "passwordDto": pass
     }
-    return this.http.post('http://localhost:8080/api/v1/logins/sessions', body, this.headersOptions );
+    return this.http.post('http://localhost:8090/api/v1/logins/sessions', body, this.headersOptions );
     
   }
   
@@ -36,7 +36,7 @@ export class LoginserviceService {
       "emailDto": email,
       "passwordDto": pass
     }
-    let aux = this.http.post('http://localhost:8080/api/v1/logins', body, this.headersOptions );
+    let aux = this.http.post('http://localhost:8090/api/v1/logins', body, this.headersOptions );
     return aux; 
   }
 

@@ -1,4 +1,5 @@
-import { Injectable } from '@angular/core';
+/**
+ * import { Injectable } from '@angular/core';
 import { HttpClient, HttpHeaders} from '@angular/common/http';
 import { Observable} from 'rxjs/internal/observable';
 import { LoginserviceService} from '../services/loginservice.service';
@@ -49,14 +50,10 @@ borrarCurso(id: String){
   .pipe(map(data=>  data));
 }
 
-}
+}**/
 
 
-/**
- * 
- * amigo creo que mesclaste lo que van el servicio con lo que va en el ts del componets esto creo que seria lo que va
- * 
- * import { Injectable } from '@angular/core';
+import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 
 @Injectable({
@@ -80,15 +77,14 @@ export class CursoServiceService {
   getToken(){}
 
   public crearCurso(name: string) {
+
     let body = {
-      "esteNombre": name (el "esteNombre" debe ser igual a que sale en la api )
+      "nombreCursoDto": name
     }
-    return this.http.post('http://localhost:8090/api/v1/Person/vaidate', body, this.headersOptions );
+    let aux = this.http.post('http://localhost:8090/api/v1/cursos', body, this.headersOptions );
+    return aux;
     
   }
   
   } 
 
-
- * 
- */
